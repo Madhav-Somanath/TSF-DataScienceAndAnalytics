@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TSF: Marks Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+</head>
+
+<body>
+    <div class="form">
+        <h1><b>Marks Prediction</b></h1>
+        <form action = "{{ url_for('predict')}}" method = "post">
+            <label for="hours" style="font-size: large;">Enter the number of hours:</label><br>
+            <input class="form-control" type="number" id="hours" name="hours" required="required">
+            <br>
+            <button type="submit" class="btn btn-dark btn-block">Predict</button>
+        </form>
+        <br>
+        <div class="lead" style="text-align: center;"><b> {{ prediction }} </b></div>
+    </div>
+</body>
+
+</html>
